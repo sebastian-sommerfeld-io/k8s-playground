@@ -1,11 +1,16 @@
-[cols="1,5,>2", options="header"]
+The `k8s` Vagrantbox All reports its metrics to Prometheus. This allows for centralized collection of metrics, which can then be analyzed and visualized using a web-based UI provided by Grafana.
+
+. Prometheus is an open-source monitoring system that collects metrics from various sources and stores them in a time-series database.
+. Grafana is an open-source analytics and monitoring platform. It provides a web-based UI that allows users to visualize and analyze data from (in this case) Prometheus.
+
+[cols="1,3,>1", options="header"]
 |===
 |Type |Service |URL
-|Docker (Host) |Grafana |http://localhost3000
-|Docker (Host) |Prometheus |http://localhost3090
-|Docker (Host) |Blackbox Exporter |http://localhost3000
-|Docker (VM) |Node Exporter |http://localhost6100
-|Docker (VM) |cAdvisor |http://localhost6110
-|Docker (VM) |Portainer |http://localhost6990
-|Minikube |Demo App |http://localhost6080
+|Docker (Host) |Grafana |http://localhost:3000
+|Docker (Host) |Prometheus |http://localhost:3090
+|Docker (Host) |Blackbox Exporter |http://localhost:3000
+|Docker (VM) |Node Exporter |http://localhost:6100
+|Docker (VM) |cAdvisor |http://localhost:6110
+|Docker (VM) |Portainer |http://localhost:6990
+|Minikube |Demo App |http://localhost:6080
 |===

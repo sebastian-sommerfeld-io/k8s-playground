@@ -4,6 +4,14 @@
 #
 # @description Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
 #
+# === Services
+#
+# ==== Docker Compose
+# include::ROOT:partial$GENERATED/services-docker.adoc[]
+#
+# ==== Minikube
+# include::ROOT:partial$GENERATED/services-k8s.adoc[]
+#
 # === Script Arguments
 #
 # The script does not accept any parameters.
