@@ -1,4 +1,4 @@
-= stop.sh
+= assert-is-vagrantbox.sh
 
 // +-----------------------------------------------+
 // |                                               |
@@ -10,22 +10,16 @@
 // +-----------------------------------------------+
 
 
-Shutdown the complete environment.
+Bash module which checks if the script (which includes this module) is invoked from inside the Vagrantbox.
 
 == Overview
 
-...
+The script checks if the script (which includes this module) is invoked from inside
+the Vagrantbox. If assertion fails, the script is aborted.
+
+CAUTION: This script is a module an is not intended to run on its own. Include in script and
+use its functions!
 
 === Script Arguments
 
 The script does not accept any parameters.
-
-* _$1_ (string): Some var
-
-=== Script Example
-
-[source, bash]
-
-----
-./stop.sh
-----

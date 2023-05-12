@@ -1,4 +1,4 @@
-= start.sh
+= deploy.sh
 
 // +-----------------------------------------------+
 // |                                               |
@@ -10,16 +10,23 @@
 // +-----------------------------------------------+
 
 
-Provisioning script for Vagrantbox to start minikube inside the Vagrantbox.
+Deploy apps to kubernetes.
 
 == Overview
 
-Start minikube inside the Vagrantbox.
+...
 
-CAUTION: This script is intended to run as part of the Vagrantbox provisioning. Do not run this
-script directly! Other files are referenced with a path that only exists inside the Vagrantbox.
-So running this script directly on your host would result in errors.
+NOTE: This script is intended to run inside the Vagrantbox, so first connect with `vagrant ssh`.
+Then navigate to `/vagrant/services/vagrantbox` folder and run the script from there.
 
 === Script Arguments
 
 The script does not accept any parameters.
+
+=== Script Example
+
+[source, bash]
+
+----
+./deploy.sh
+----

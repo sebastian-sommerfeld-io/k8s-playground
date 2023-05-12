@@ -1,4 +1,4 @@
-= deploy-demo-app.sh
+= startup.sh
 
 // +-----------------------------------------------+
 // |                                               |
@@ -10,11 +10,11 @@
 // +-----------------------------------------------+
 
 
-Provisioning script for Vagrantbox to deploy and run a demo webapp in minikube.
+Provisioning script for Vagrantbox to start minikube inside the Vagrantbox.
 
 == Overview
 
-Deploy and run a demo webapp in minikube.
+Start minikube inside the Vagrantbox.
 
 CAUTION: This script is intended to run as part of the Vagrantbox provisioning. Do not run this
 script directly! Other files are referenced with a path that only exists inside the Vagrantbox.

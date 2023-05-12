@@ -1,4 +1,4 @@
-= stop.sh
+= destroy.sh
 
 // +-----------------------------------------------+
 // |                                               |
@@ -10,7 +10,7 @@
 // +-----------------------------------------------+
 
 
-Shutdown the complete environment.
+Shutdown and destroy the complete environment.
 
 == Overview
 
@@ -20,12 +20,10 @@ Shutdown the complete environment.
 
 The script does not accept any parameters.
 
-* _$1_ (string): Some var
-
 === Script Example
 
 [source, bash]
 
 ----
-./stop.sh
+./destroy.sh
 ----

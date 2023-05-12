@@ -1,8 +1,11 @@
 * `xref:AUTO-GENERATED:bash-docs/src/main/lib/log-sh.adoc[src/main/lib/log.sh]`
-* `xref:AUTO-GENERATED:bash-docs/src/main/services/vagrantbox/minikube/deploy-demo-app-sh.adoc[src/main/services/vagrantbox/minikube/deploy-demo-app.sh]`
-* `xref:AUTO-GENERATED:bash-docs/src/main/services/vagrantbox/minikube/start-sh.adoc[src/main/services/vagrantbox/minikube/start.sh]`
-* `xref:AUTO-GENERATED:bash-docs/src/main/services/vagrantbox/ops/start-sh.adoc[src/main/services/vagrantbox/ops/start.sh]`
+* `xref:AUTO-GENERATED:bash-docs/src/main/lib/assert-is-vagrantbox-sh.adoc[src/main/lib/assert-is-vagrantbox.sh]`
+* `xref:AUTO-GENERATED:bash-docs/src/main/services/vagrantbox/expose-dashboard-sh.adoc[src/main/services/vagrantbox/expose-dashboard.sh]`
+* `xref:AUTO-GENERATED:bash-docs/src/main/services/vagrantbox/minikube/startup-sh.adoc[src/main/services/vagrantbox/minikube/startup.sh]`
+* `xref:AUTO-GENERATED:bash-docs/src/main/services/vagrantbox/ops/startup-sh.adoc[src/main/services/vagrantbox/ops/startup.sh]`
+* `xref:AUTO-GENERATED:bash-docs/src/main/services/vagrantbox/deploy-sh.adoc[src/main/services/vagrantbox/deploy.sh]`
 * `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]`
+* `xref:AUTO-GENERATED:bash-docs/src/main/destroy-sh.adoc[src/main/destroy.sh]`
 * `xref:AUTO-GENERATED:bash-docs/src/main/start-sh.adoc[src/main/start.sh]`
 * `xref:AUTO-GENERATED:bash-docs/src/main/provision/configure-sh.adoc[src/main/provision/configure.sh]`
 * `xref:AUTO-GENERATED:bash-docs/src/main/provision/install-kubectl-sh.adoc[src/main/provision/install-kubectl.sh]`
