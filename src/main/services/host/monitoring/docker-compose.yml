@@ -14,7 +14,7 @@ services:
     ports:
       - 3090:9090
     extra_hosts:
-    - host.docker.internal:host-gateway
+      - host.docker.internal:host-gateway
 
   grafana:
     image: grafana/grafana:9.2.15-ubuntu
@@ -33,7 +33,7 @@ services:
     ports:
       - 3000:3000
     extra_hosts:
-    - host.docker.internal:host-gateway
+      - host.docker.internal:host-gateway
 
   blackbox_exporter:
     image: prom/blackbox-exporter:v0.23.0
