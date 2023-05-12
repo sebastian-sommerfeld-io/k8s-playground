@@ -1,0 +1,54 @@
+---
+global:
+  scrape_interval: 5s
+  external_labels:
+    monitor: 'minikube-monitoring'
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+  ##############################################################################
+  #    node exporter                                                           #
+  ##############################################################################
+  - job_name: 'metrics'
+    scrape_interval: 5s
+    static_configs:
+      - targets:
+          - host.docker.internal:6100
+        labels:
+          group: "node-metrics"
+      - targets:
+          - host.docker.internal:6110
+        labels:
+          group: "docker-metrics"
+  ##############################################################################
+  #    blackbox exporter                                                       #
+  ##############################################################################
+  - job_name: 'vbox-docker'
+    metrics_path: /probe
+    params:
+      module: [http_2xx]  # Look for a HTTP 200 response.
+    static_configs:
+      - targets:
+          - host.docker.internal::6990
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox_exporter:3115
+  - job_name: 'minikube'
+    metrics_path: /probe
+    params:
+      module: [http_2xx]
+    static_configs:
+      - targets:
+          - host.docker.internal:6080
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox_exporter:3115

@@ -1,0 +1,11 @@
+[cols="1,5,>2", options="header"]
+|===
+|Type |Service |URL
+|Docker (Host) |Grafana |http://localhost3000
+|Docker (Host) |Prometheus |http://localhost3090
+|Docker (Host) |Blackbox Exporter |http://localhost3000
+|Docker (VM) |Node Exporter |http://localhost6100
+|Docker (VM) |cAdvisor |http://localhost6110
+|Docker (VM) |Portainer |http://localhost6990
+|Minikube |Demo App |http://localhost6080
+|===

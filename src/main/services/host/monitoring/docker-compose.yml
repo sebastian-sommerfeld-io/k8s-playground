@@ -1,0 +1,54 @@
+---
+version: "3.3"
+services:
+  prometheus:
+    image: prom/prometheus:v2.43.0
+    container_name: prometheus
+    restart: unless-stopped
+    volumes:
+      - ./assets/config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+      - /etc/timezone:/etc/timezone:ro
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    ports:
+      - 3090:9090
+    extra_hosts:
+    - host.docker.internal:host-gateway
+
+  grafana:
+    image: grafana/grafana:9.2.15-ubuntu
+    container_name: grafana
+    restart: unless-stopped
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+    depends_on:
+      - prometheus
+    volumes:
+      - ./assets/provisioning/grafana:/etc/grafana/provisioning:ro
+      - grafana_data:/var/lib/grafana
+      - /etc/timezone:/etc/timezone:ro
+    ports:
+      - 3000:3000
+    extra_hosts:
+    - host.docker.internal:host-gateway
+
+  blackbox_exporter:
+    image: prom/blackbox-exporter:v0.23.0
+    container_name: blackbox_exporter
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+    ports:
+      - 3115:9115
+    volumes:
+      - ./assets/config/prometheus/blackbox-exporter.yml:/etc/prometheus/blackbox-exporter.yml:ro
+      - /etc/timezone:/etc/timezone:ro
+    command:
+      - "--config.file=/etc/prometheus/blackbox-exporter.yml"
+
+volumes:
+  prometheus_data:
+  grafana_data:
