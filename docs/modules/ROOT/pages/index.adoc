@@ -1,0 +1,4 @@
+= Kubernetes Playground
+include::ROOT:partial$vars.adoc[]
+
+include::ROOT:partial$README.adoc[]
