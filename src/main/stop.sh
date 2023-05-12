@@ -1,8 +1,8 @@
 #!/bin/bash
 # @file stop.sh
-# @brief Shutdown the complete environment and cleanup afterwards.
+# @brief Shutdown the complete environment.
 #
-# @description Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+# @description ...
 #
 # === Script Arguments
 #
@@ -32,9 +32,8 @@ LOG_INFO "Shutdown the complete environment"
 LOG_HEADER "Shutdown monitoring stack"
 (
     cd services/host/monitoring || exit
-    docker compose down -v --rmi all
+    docker compose down
 )
 
 LOG_HEADER "Shutdown Vagrantbox which is running minikube"
 vagrant halt
-vagrant destroy -f

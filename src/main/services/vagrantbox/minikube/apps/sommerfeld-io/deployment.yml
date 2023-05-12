@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: website-deployment
+  labels:
+    app: website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: website
+  template:
+    metadata:
+      labels:
+        app: website
+    spec:
+      containers:
+        - name: website-deployment
+          image: sommerfeldio/website:0.1.4
+          resources:
+            requests:
+              cpu: "100m"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80

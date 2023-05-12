@@ -5,7 +5,7 @@
 # @description The script is bash module which provides utility functions for logging.
 #
 # CAUTION: This script is a module an is not intended to run on its own. Include in script and
-# use its functions!.
+# use its functions!
 #
 # === Script Arguments
 #

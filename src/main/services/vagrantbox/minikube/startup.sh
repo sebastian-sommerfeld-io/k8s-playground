@@ -1,5 +1,5 @@
 #!/bin/bash
-# @file install-minikube.sh
+# @file startup.sh
 # @brief Provisioning script for Vagrantbox to start minikube inside the Vagrantbox.
 #
 # @description Start minikube inside the Vagrantbox.
@@ -26,6 +26,8 @@ source "/vagrant/lib/log.sh"
 LOG_HEADER_PLAIN "Start minikube cluster as user $(whoami)"
 minikube start --driver=docker --force
 
-LOG_HEADER_PLAIN "Show information from minikube and kubectl"
+LOG_HEADER_PLAIN "Show kubectl version"
 kubectl version
+
+LOG_HEADER_PLAIN "Show resources"
 kubectl get po -A

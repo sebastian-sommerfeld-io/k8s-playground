@@ -1,5 +1,5 @@
 #!/bin/bash
-# @file start.sh
+# @file startup.sh
 # @brief Provisioning script for Vagrantbox to startup the docker compose ops stack inside the Vagrantbox.
 #
 # @description Startup the docker compose ops stack inside the Vagrantbox. The ops stack exposes

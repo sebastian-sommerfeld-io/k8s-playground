@@ -39,6 +39,7 @@ aliases=(
   'alias ll="ls -alFh --color=auto"'
   'alias ls="ls -a --color=auto"'
   'alias grep="grep --color=auto"'
+  'cd /vagrant'
 )
 for alias in "${aliases[@]}"; do
   grep -qxF "$alias" "$bashrc" || echo "$alias" >> "$bashrc"
