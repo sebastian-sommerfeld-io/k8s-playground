@@ -46,14 +46,6 @@ function LOG_INFO() {
 }
 
 
-# @description Log message with log level = INFO but without changing colors.
-#
-# @arg $@ String The line to print.
-function LOG_INFO_PLAIN() {
-  echo -e "[INFO] $1"
-}
-
-
 # @description Log message with log level = DONE.
 #
 # @arg $@ String The line to print.
@@ -77,14 +69,4 @@ function LOG_HEADER() {
   LOG_INFO "------------------------------------------------------------------------"
   LOG_INFO "$1"
   LOG_INFO "------------------------------------------------------------------------"
-}
-
-
-# @description Print log output in a header-style but without changing colors.
-#
-# @arg $@ String The line to print.
-function LOG_HEADER_PLAIN() {
-  LOG_INFO_PLAIN "------------------------------------------------------------------------"
-  LOG_INFO_PLAIN "$1"
-  LOG_INFO_PLAIN "------------------------------------------------------------------------"
 }

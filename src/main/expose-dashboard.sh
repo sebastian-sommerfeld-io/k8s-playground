@@ -15,9 +15,6 @@
 # For example, you can scale a Deployment, initiate a rolling update, restart a pod or deploy new
 # applications using a deploy wizard.
 #
-# NOTE: This script is intended to run inside the Vagrantbox, so first connect with ``vagrant ssh``.
-# Then navigate to ``/vagrant/services`` folder and run the script from there.
-#
 # === Script Arguments
 #
 # The script does not accept any parameters.
@@ -31,10 +28,9 @@
 #
 # === See Also
 #
-# See https://minikube.sigs.k8s.io/docs/handbook/dashboard and https://minikube.sigs.k8s.io/docs/commands/dashboard
+# . See https://minikube.sigs.k8s.io/docs/handbook/dashboard and https://minikube.sigs.k8s.io/docs/commands/dashboard
 # for further information on how to use the Dashboard app with minikube.
-#
-# For additional information, see
+# . For additional information, see
 # link:https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard[the official Dashboard documentation].
 
 
@@ -45,10 +41,8 @@ set -o nounset
 
 
 # Includes
-source "../../lib/log.sh"
-source "../../lib/assert-is-vagrantbox.sh"
+source "lib/log.sh"
 
 
 LOG_HEADER "Expose dashboard app"
-sudo minikube addons enable ingress
-sudo minikube dashboard --url --port=6999
+minikube dashboard --url --port=3999

@@ -7,7 +7,7 @@ spec:
   selector:
     app: website
   ports:
-    - port: 80
-      targetPort: 6888
+    - port: 3888
+      targetPort: 80
       protocol: TCP
   type: LoadBalancer

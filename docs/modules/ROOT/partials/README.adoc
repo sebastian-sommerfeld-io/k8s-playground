@@ -17,13 +17,12 @@ Minikube provides many of the core features of Kubernetes, such as the ability t
 == How to use this project
 CAUTION: Work in progess ...
 
-. Startup with `xref:AUTO-GENERATED:bash-docs/src/main/start-sh.adoc[src/main/start.sh]`
-. ...
-. ...
-. ...
-. ...
-. Shutdown using `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]` (shutting down with `xref:AUTO-GENERATED:bash-docs/src/main/destroy-sh.adoc[src/main/destroy.sh]` also removes all Docker images and Vagrant data)
+. Install minikube and some tools like kubectl with `xref:AUTO-GENERATED:bash-docs/src/main/provision/install-sh.adoc[src/main/provision/install.sh]`
+. Startup minikube and the monitoring services with `xref:AUTO-GENERATED:bash-docs/src/main/start-sh.adoc[src/main/start.sh]`
+. Shutdown using `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]`
 
+=== Prerequisites
+A docker installation is needed to run minikube. To run all services from this stack Docker 23.0.5 or greater is needed.
 
 == Risks and Technical Debts
 See https://github.com/sebastian-sommerfeld-io/k8s-playground/issues?q=is%3Aissue+is%3Aopen+label%3Asecurity%2Crisk+ for all issus labeles as `risk` (= some sort of risk or a technical debt) or `security` (= related to security issues).

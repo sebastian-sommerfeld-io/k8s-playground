@@ -4,9 +4,6 @@
 #
 # @description ...
 #
-# NOTE: This script is intended to run inside the Vagrantbox, so first connect with ``vagrant ssh``.
-# Then navigate to ``/vagrant/services/vagrantbox`` folder and run the script from there.
-#
 # === Script Arguments
 #
 # The script does not accept any parameters.
@@ -26,13 +23,12 @@ set -o nounset
 
 
 # Includes
-source "../../lib/log.sh"
-source "../../lib/assert-is-vagrantbox.sh"
+source "lib/log.sh"
 
 
 LOG_HEADER "Deploy app to kubernetes"
 (
-    cd minikube/apps || exit
+    cd apps || exit
 
     echo -e "$LOG_INFO Select app for deployment"
     select a in */; do

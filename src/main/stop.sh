@@ -27,13 +27,8 @@ set -o nounset
 source "lib/log.sh"
 
 
-LOG_INFO "Shutdown the complete environment"
+LOG_HEADER "Shutdown minikube"
+minikube stop
 
 LOG_HEADER "Shutdown monitoring stack"
-(
-    cd services/host/monitoring || exit
-    docker compose down
-)
-
-LOG_HEADER "Shutdown Vagrantbox which is running minikube"
-vagrant halt
+docker compose down
