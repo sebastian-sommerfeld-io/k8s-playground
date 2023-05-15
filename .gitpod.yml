@@ -5,9 +5,17 @@ tasks:
   - name: Install jarvis
     init: curl https://raw.githubusercontent.com/sebastian-sommerfeld-io/jarvis/main/src/main/install.sh | bash -
   - name: Install minikube
-    init: src/main/provision/install.sh
+    init: >
+      (
+        cd src/main/provision || exit
+        install.sh
+      )
   - name: Start minikube
-    init: src/main/start.sh
+    init: >
+      (
+        cd src/main || exit
+        start.sh
+      )
 
 vscode:
   extensions:
