@@ -20,6 +20,10 @@
 # === Script Arguments
 #
 # The script does not accept any parameters.
+#
+# === See Also
+#
+# . Stackoverflow: link:https://stackoverflow.com/questions/57821066/how-to-update-minikube-latest-version[How to update minikube latest version]
 
 
 set -o errexit
