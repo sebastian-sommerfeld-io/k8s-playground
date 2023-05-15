@@ -55,7 +55,8 @@ services:
     container_name: k8s_node_exporter
     restart: always
     command:
-      - --path.rootfs=/host --web.listen-address=3100
+      - --path.rootfs=/host
+      - --web.listen-address=:3100
     pid: host
     network_mode: host
     volumes:

@@ -62,7 +62,7 @@ minikube addons enable ingress
 minikube addons enable metrics-server
 minikube addons enable dashboard
 
-LOG_HEADER "Wait for a moment to allow minikube to fully startup"
+LOG_INFO "Wait for a moment to allow minikube to fully startup"
 sleep 10
 
 LOG_HEADER "Show addons"

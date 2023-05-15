@@ -10,7 +10,7 @@ datasources:
     type: prometheus
     access: proxy
     orgId: 1
-    url: http://k8s_prometheus:3090
+    url: http://host.docker.internal:3090
     password:   # <string> database password, if used
     user:   # <string> database user, if used
     database:   # <string> database name, if used
