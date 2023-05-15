@@ -14,15 +14,55 @@ Note that for learning and development purposes, it is not necessary to install 
 
 Minikube provides many of the core features of Kubernetes, such as the ability to deploy and manage containers, and allows developers to experiment and learn about Kubernetes without the need for a full-scale production cluster. Additionally, Minikube is a great option for development because it allows developers to work on their applications in a Kubernetes environment without the need for a complex production infrastructure.
 
-== How to use this project
-CAUTION: Work in progess ...
+[plantuml, puml-build-image, svg]
+----
+@startuml
 
+skinparam linetype ortho
+skinparam monochrome false
+skinparam componentStyle uml2
+skinparam backgroundColor #fff
+skinparam ArrowColor black
+skinparam NoteBorderColor Grey
+skinparam NoteBackgroundColor #fdfdfd
+skinparam defaultTextAlignment center
+skinparam activity {
+FontName Ubuntu
+}
+
+component minikube {
+    component dashboard <<add-on>>
+    component metrics_server as "metrics-server" <<add-on>>
+    collections services <<containers>>
+}
+
+component monitoring {
+    component prometheus
+    component grafana
+    component blackbox_exporter
+    component node_exporter
+    component cAdvisor
+    component portailer
+    
+    prometheus -> grafana
+    node_exporter -up-> prometheus
+    blackbox_exporter -up-> prometheus
+}
+
+metrics_server -down-> prometheus
+
+@enduml
+----
+
+== How to use this project
 . Install minikube and some tools like kubectl with `xref:AUTO-GENERATED:bash-docs/src/main/provision/install-sh.adoc[src/main/provision/install.sh]`
 . Startup minikube and the monitoring services with `xref:AUTO-GENERATED:bash-docs/src/main/start-sh.adoc[src/main/start.sh]`
+. Expose the Kkubernetes Dashboard using `xref:AUTO-GENERATED:bash-docs/src/main/expose-dashboard.adoc[src/main/expose-dashboard.sh]`
+. Deploy apps to the cluster using `xref:AUTO-GENERATED:bash-docs/src/main/deploy.adoc[src/main/deploy.sh]`
 . Shutdown using `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]`
 
 === Prerequisites
-A docker installation is needed to run minikube. To run all services from this stack Docker 23.0.5 or greater is needed.
+A docker installation is needed to run minikube. To run all services Docker 23.0.5 or greater is needed. This project is developed on Ubuntu Linux and is not tested with any other distribution (although it should work just fine with other distributions).
 
 == Risks and Technical Debts
 See https://github.com/sebastian-sommerfeld-io/k8s-playground/issues?q=is%3Aissue+is%3Aopen+label%3Asecurity%2Crisk+ for all issus labeles as `risk` (= some sort of risk or a technical debt) or `security` (= related to security issues).
