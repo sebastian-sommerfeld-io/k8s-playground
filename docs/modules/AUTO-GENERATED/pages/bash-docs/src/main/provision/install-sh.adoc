@@ -1,4 +1,4 @@
-= start.sh
+= install.sh
 
 // +-----------------------------------------------+
 // |                                               |
@@ -10,19 +10,11 @@
 // +-----------------------------------------------+
 
 
-Startup the complete environment.
+Install minikube and tools.
 
 == Overview
 
-...
-
-=== Services
-
-==== Docker Compose
-include::ROOT:partial$GENERATED/services-docker.adoc[]
-
-==== Minikube
-include::ROOT:partial$GENERATED/services-k8s.adoc[]
+Install minikube and tools like kubectl. Minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.
 
 === Prerequisites
 
@@ -40,15 +32,3 @@ To run minikube you'll need
 === Script Arguments
 
 The script does not accept any parameters.
-
-=== Script Example
-
-[source, bash]
-
-----
-./start.sh
-----
-
-=== See also
-
-. Startup minikube: https://minikube.sigs.k8s.io/docs/start/

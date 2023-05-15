@@ -27,11 +27,9 @@ The script does not accept any parameters.
 
 * <<_log_error,LOG_ERROR>>
 * <<_log_info,LOG_INFO>>
-* <<_log_info_plain,LOG_INFO_PLAIN>>
 * <<_log_done,LOG_DONE>>
 * <<_log_warn,LOG_WARN>>
 * <<_log_header,LOG_HEADER>>
-* <<_log_header_plain,LOG_HEADER_PLAIN>>
 
 === LOG_ERROR
 
@@ -44,14 +42,6 @@ Log message with log level = ERROR.
 === LOG_INFO
 
 Log message with log level = INFO.
-
-==== Arguments
-
-* *...* (String): The line to print.
-
-=== LOG_INFO_PLAIN
-
-Log message with log level = INFO but without changing colors.
 
 ==== Arguments
 
@@ -76,14 +66,6 @@ Log message with log level = WARN.
 === LOG_HEADER
 
 Print log output in a header-style.
-
-==== Arguments
-
-* *...* (String): The line to print.
-
-=== LOG_HEADER_PLAIN
-
-Print log output in a header-style but without changing colors.
 
 ==== Arguments
 

@@ -1,4 +1,4 @@
-= install-kubectl.sh
+= deploy.sh
 
 // +-----------------------------------------------+
 // |                                               |
@@ -10,16 +10,20 @@
 // +-----------------------------------------------+
 
 
-Provisioning script for Vagrantbox to install kubectl into the Vagrantbox.
+Deploy apps to kubernetes.
 
 == Overview
 
-Install kubectl into the Vagrantbox.
-
-CAUTION: This script is intended to run as part of the Vagrantbox provisioning. Do not run this
-script directly! Other files are referenced with a path that only exists inside the Vagrantbox.
-So running this script directly on your host would result in errors.
+...
 
 === Script Arguments
 
 The script does not accept any parameters.
+
+=== Script Example
+
+[source, bash]
+
+----
+./deploy.sh
+----
