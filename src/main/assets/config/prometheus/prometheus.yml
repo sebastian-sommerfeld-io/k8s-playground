@@ -6,7 +6,7 @@ global:
 scrape_configs:
   - job_name: 'prometheus'
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ['localhost:9090'] # localhost = k8s_prometheus container
   ##############################################################################
   #    node exporter                                                           #
   ##############################################################################
@@ -24,20 +24,20 @@ scrape_configs:
   ##############################################################################
   #    blackbox exporter                                                       #
   ##############################################################################
-  - job_name: 'vbox-docker'
+  - job_name: 'management-services'
     metrics_path: /probe
     params:
       module: [http_2xx]  # Look for a HTTP 200 response.
     static_configs:
       - targets:
-          - host.docker.internal::3990
+          - host.docker.internal:3990
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: blackbox_exporter:3115
+        replacement: host.docker.internal:3115
   - job_name: 'minikube'
     metrics_path: /probe
     params:
@@ -52,4 +52,4 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: blackbox_exporter:3115
+        replacement: host.docker.internal:3115

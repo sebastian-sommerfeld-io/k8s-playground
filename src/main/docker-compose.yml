@@ -44,6 +44,8 @@ services:
       - k8s_prometheus
     ports:
       - 3115:9115
+    extra_hosts:
+      - host.docker.internal:host-gateway
     volumes:
       - ./assets/config/prometheus/blackbox-exporter.yml:/etc/prometheus/blackbox-exporter.yml:ro
       - /etc/timezone:/etc/timezone:ro
