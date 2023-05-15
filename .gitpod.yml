@@ -8,13 +8,13 @@ tasks:
     init: >
       (
         cd src/main/provision || exit
-        install.sh
+        ./install.sh
       )
   - name: Start minikube
     init: >
       (
         cd src/main || exit
-        start.sh
+        ./start.sh
       )
 
 vscode:
