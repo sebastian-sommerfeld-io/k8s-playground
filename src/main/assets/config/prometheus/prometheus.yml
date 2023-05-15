@@ -14,11 +14,11 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
       - targets:
-          - host.docker.internal:6100
+          - host.docker.internal:3100
         labels:
           group: "node-metrics"
       - targets:
-          - host.docker.internal:6110
+          - host.docker.internal:3110
         labels:
           group: "docker-metrics"
   ##############################################################################
@@ -30,7 +30,7 @@ scrape_configs:
       module: [http_2xx]  # Look for a HTTP 200 response.
     static_configs:
       - targets:
-          - host.docker.internal::6990
+          - host.docker.internal::3990
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -44,7 +44,8 @@ scrape_configs:
       module: [http_2xx]
     static_configs:
       - targets:
-          - host.docker.internal:6080
+          - host.docker.internal:3080
+          - host.docker.internal:3888
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
