@@ -66,8 +66,8 @@ include::ROOT:partial$GENERATED/services-k8s.adoc[]
 == How to use this project
 . Install minikube and some tools like kubectl with `xref:AUTO-GENERATED:bash-docs/src/main/provision/install-sh.adoc[src/main/provision/install.sh]`
 . Startup minikube and the monitoring services with `xref:AUTO-GENERATED:bash-docs/src/main/start-sh.adoc[src/main/start.sh]`
-. Expose the Kkubernetes Dashboard using `xref:AUTO-GENERATED:bash-docs/src/main/expose-dashboard.adoc[src/main/expose-dashboard.sh]`
-. Deploy apps to the cluster using `xref:AUTO-GENERATED:bash-docs/src/main/deploy.adoc[src/main/deploy.sh]`
+. Expose the Kkubernetes Dashboard using `xref:AUTO-GENERATED:bash-docs/src/main/expose-dashboard-sh.adoc[src/main/expose-dashboard.sh]`
+. Deploy apps to the cluster using `xref:AUTO-GENERATED:bash-docs/src/main/deploy-sh.adoc[src/main/deploy.sh]`
 . Shutdown using `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]`
 
 === Prerequisites
