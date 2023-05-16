@@ -3,12 +3,12 @@ The `k8s` Vagrantbox All reports its metrics to Prometheus. This allows for cent
 . Prometheus is an open-source monitoring system that collects metrics from various sources and stores them in a time-series database.
 . Grafana is an open-source analytics and monitoring platform. It provides a web-based UI that allows users to visualize and analyze data from (in this case) Prometheus.
 
-[cols="3,>1", options="header"]
+[cols="1,>1", options="header"]
 |===
 |App |URL
 |Grafana |http://localhost:3000
 |Prometheus |http://localhost:3090
-|Blackbox Exporter |http://localhost:3000
+|Blackbox Exporter |http://localhost:3115
 |Node Exporter |http://localhost:3100
 |cAdvisor |http://localhost:3110
 |Portainer |http://localhost:3990
