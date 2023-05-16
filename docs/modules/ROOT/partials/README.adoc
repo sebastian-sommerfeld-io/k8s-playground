@@ -8,7 +8,7 @@ image:{github-actions-url}/{job-ci}/{badge}[Github Badge, link={github-actions-u
 * Where to file issues -> {url-project}/issues
 
 == About this project
-This project ist a local http://www.kubernetes.io[Kubernetes] installation for development purposes. It is running inside a virtual machine to avoid polluting the my development machine and to ensure portability. 
+This project is all about a local http://www.kubernetes.io[Kubernetes] installation for development purposes. It is running inside a virtual machine to avoid polluting the my development machine and to ensure portability. 
 
 Note that for learning and development purposes, it is not necessary to install a full-blown Kubernetes cluster. Instead Minikube is used. Minikube is a lightweight alternative that allows developers to quickly set up a single-node Kubernetes cluster on their local machine.
 
@@ -45,7 +45,7 @@ component monitoring {
     component blackbox_exporter
     component node_exporter
     component cAdvisor
-    component portailer
+    component portainer
     
     prometheus -> grafana
     node_exporter -up-> prometheus

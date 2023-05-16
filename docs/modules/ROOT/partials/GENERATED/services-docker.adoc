@@ -5,12 +5,11 @@ The `k8s` Vagrantbox All reports its metrics to Prometheus. This allows for cent
 
 [cols="1,3,>1", options="header"]
 |===
-|Type |Service |URL
-|Docker |Grafana |http://localhost:3000
-|Docker |Prometheus |http://localhost:3090
-|Docker |Blackbox Exporter |http://localhost:3000
-|Docker |Node Exporter |http://localhost:3100
-|Docker |cAdvisor |http://localhost:3110
-|Docker |Portainer |http://localhost:3990
-|Minikube |Demo App |http://localhost:3080
+|App |URL
+|Grafana |http://localhost:3000
+|Prometheus |http://localhost:3090
+|Blackbox Exporter |http://localhost:3000
+|Node Exporter |http://localhost:3100
+|cAdvisor |http://localhost:3110
+|Portainer |http://localhost:3990
 |===
