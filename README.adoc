@@ -88,6 +88,11 @@ include::ROOT:partial$GENERATED/services-k8s.adoc[]
 . Deploy apps to the cluster using `xref:AUTO-GENERATED:bash-docs/src/main/deploy-sh.adoc[src/main/deploy.sh]`
 . Shutdown using `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]`
 
+=== How to use minikube
+When using a custom Kubernetes Cluster (using minikube, kubeadm or the like), there is no LoadBalancer integrated (unlike AWS or Google Cloud). With this default setup, you can only use `link:https://kubernetes.io/docs/concepts/services-networking/service/#nodeport[NodePort]` or an Ingress Controller. With the `link:https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-class[Ingress Controller]` you can setup a domain name which maps to your pod; you don't need to give your Service the LoadBalancer type if you use an Ingress Controller.
+
+To access the service through its IP from the minikube cluster, run `minikube tunnel` in a separate shell. Then look up the IP of your service in the Kubernetes Dashboard and access this IP and the correct port from your browser.
+
 === Prerequisites
 A docker installation is needed to run minikube. To run all services Docker verseion 23.0.5 or greater is needed. This project is developed on Ubuntu Linux and is not tested with any other distribution (although it should work just fine with other distributions).
 
