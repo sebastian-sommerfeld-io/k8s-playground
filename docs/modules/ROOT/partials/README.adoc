@@ -58,10 +58,10 @@ metrics_server -down-> prometheus
 ----
 
 === Docker Compose
-include::ROOT:partial$GENERATED/services-docker.adoc[]
+include::ROOT:partial$services-docker.adoc[]
 
 === Minikube
-include::ROOT:partial$GENERATED/services-k8s.adoc[]
+include::ROOT:partial$services-k8s.adoc[]
 
 == How to use this project
 . Install minikube and some tools like kubectl with `xref:AUTO-GENERATED:bash-docs/src/main/provision/install-sh.adoc[src/main/provision/install.sh]`

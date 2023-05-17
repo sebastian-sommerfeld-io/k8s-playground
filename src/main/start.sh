@@ -7,10 +7,10 @@
 # === Services
 #
 # ==== Docker Compose
-# include::ROOT:partial$GENERATED/services-docker.adoc[]
+# include::ROOT:partial$services-docker.adoc[]
 #
 # ==== Minikube
-# include::ROOT:partial$GENERATED/services-k8s.adoc[]
+# include::ROOT:partial$services-k8s.adoc[]
 #
 # === Prerequisites
 #
