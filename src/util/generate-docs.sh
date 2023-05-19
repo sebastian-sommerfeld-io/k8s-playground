@@ -63,7 +63,7 @@ LOG_HEADER "Generate docs"
 
     readonly TARGET_BASE_PATH="docs/modules/AUTO-GENERATED/partials/environment"
     LOG_INFO "Create target directory"
-    mkdir -p "$TARGET_BASE_PATH"
+    mkdir -p "$(pwd)/$TARGET_BASE_PATH"
     
     readonly COMPOSE_FILE="src/main/docker-compose.yml"
     readonly TARGET_ADOC_FILE="$TARGET_BASE_PATH/services-docker-table-body.adoc"
