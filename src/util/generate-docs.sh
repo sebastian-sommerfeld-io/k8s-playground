@@ -66,7 +66,7 @@ LOG_HEADER "Generate docs"
     mkdir -p "$TARGET_BASE_PATH"
     
     readonly COMPOSE_FILE="src/main/docker-compose.yml"
-    readonly TARGET_ADOC_FILE="$TARGET_BASE_PATH/services-docker-table.adoc"
+    readonly TARGET_ADOC_FILE="$TARGET_BASE_PATH/services-docker-table-body.adoc"
     
     LOG_INFO "Generate docs from $COMPOSE_FILE"
     yq eval '.services.[] | "|" + .container_name + " |" + .image' "$COMPOSE_FILE" > "$TARGET_ADOC_FILE"

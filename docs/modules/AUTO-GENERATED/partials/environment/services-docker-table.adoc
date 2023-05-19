@@ -1,0 +1,6 @@
+|k8s_prometheus |prom/prometheus:v2.43.0
+|k8s_grafana |grafana/grafana:9.2.15-ubuntu
+|k8s_blackbox_exporter |prom/blackbox-exporter:v0.23.0
+|k8s_node_exporter |prom/node-exporter:latest
+|k8s_cadvisor |gcr.io/cadvisor/cadvisor:v0.47.0
+|k8s_portainer |portainer/portainer-ce:alpine
