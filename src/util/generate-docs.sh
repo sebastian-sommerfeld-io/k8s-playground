@@ -60,6 +60,8 @@ LOG_HEADER "Generate docs"
 (
     cd ../../ || exit
     LOG_INFO "Working from $(pwd)"
+    ls -alF
+    whoami
 
     readonly TARGET_BASE_PATH="docs/modules/AUTO-GENERATED/partials/environment"
     LOG_INFO "Create target directory"
