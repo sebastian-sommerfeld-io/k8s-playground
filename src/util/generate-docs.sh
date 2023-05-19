@@ -4,7 +4,7 @@
 #
 # @description The script auto-generates docs based on Docker Compose config, Minikube config and
 # Terraform config. All generated files are Asciidoc and sorted into this repos docs (see folder
-# ``docs/modules/AUTO-GENERATED/pages/environment``).
+# ``docs/modules/AUTO-GENERATED/pages``).
 #
 # NOTE: When calling this script from the ``.github/workflows/auto-generate-docs.yml`` workflow,
 # make sure you create the bash-docs first.
@@ -63,9 +63,9 @@ LOG_HEADER "Generate docs"
     ls -alF
     whoami
 
-    readonly TARGET_BASE_PATH="docs/modules/AUTO-GENERATED/partials/environment"
-    LOG_INFO "Create target directory"
-    mkdir -p "$(pwd)/$TARGET_BASE_PATH"
+    readonly TARGET_BASE_PATH="docs/modules/AUTO-GENERATED/partials"
+    # LOG_INFO "Create target directory"
+    # mkdir -p "$(pwd)/$TARGET_BASE_PATH"
     
     readonly COMPOSE_FILE="src/main/docker-compose.yml"
     readonly TARGET_ADOC_FILE="$TARGET_BASE_PATH/services-docker-table-body.adoc"
