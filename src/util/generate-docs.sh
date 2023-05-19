@@ -63,9 +63,9 @@ LOG_HEADER "Generate docs"
     ls -alF
     whoami
 
-    readonly TARGET_BASE_PATH="docs/modules/AUTO-GENERATED/partials"
-    # LOG_INFO "Create target directory"
-    # mkdir -p "$(pwd)/$TARGET_BASE_PATH"
+    readonly TARGET_BASE_PATH="docs/modules/AUTO-GENERATED/partials/environment"
+    LOG_INFO "Create target directory"
+    mkdir -p "$(pwd)/$TARGET_BASE_PATH"
     
     readonly COMPOSE_FILE="src/main/docker-compose.yml"
     readonly TARGET_ADOC_FILE="$TARGET_BASE_PATH/services-docker-table-body.adoc"
