@@ -1,5 +1,7 @@
 = Certified Kubernetes Application Developer
 
+The Certified Kubernetes Application Developer (CKAD) program has been developed by the Cloud Native Computing Foundation (CNCF), in collaboration with The Linux Foundation, to help expand the Kubernetes ecosystem through standardized training and certification.
+
 *Who Is It For:* This certification is for Kubernetes engineers, cloud engineers and other IT professionals responsible for building, deploying, and configuring cloud native applications with Kubernetes.
 
 *About This Certification:* CKAD has been developed by The Linux Foundation and the Cloud Native Computing Foundation (CNCF), to help expand the Kubernetes ecosystem through standardized training and certification. This exam is an online, proctored, performance-based test that consists of a set of performance-based tasks (problems) to be solved in a command line.
@@ -8,11 +10,12 @@
 The exam assumes working knowledge of container runtimes and microservice architecture. The successful candidate will be comfortable (1) working with (OCI-compliant) container images, (2) applying Cloud Native application concepts and architectures and (3) working with and validating Kubernetes resource definitions.
 
 * Udemy Course: https://www.udemy.com/course/certified-kubernetes-application-developer/learn/lecture/12299352#overview
-* Cert: https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/
+* Cert: https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/ (about the cert: https://www.cncf.io/certification/ckad)
 
 
 == Udemy Section 1: Course Content and Introduction
-The CKAd test to obtain the cert is a hands-on practical exam. So it is important to practice what you learn. So make use of the browser-lab which accompanies the Udemy course.
+The CKAD test to obtain the cert is a hands-on practical exam. So it is important to practice what you learn. So make use of the browser-lab which accompanies the Udemy course.
+
 
 == Udemy Section 2: Core Concepts
 
@@ -37,3 +40,11 @@ The CKAd test to obtain the cert is a hands-on practical exam. So it is importan
 == Udemy Section 12: Lightning Labels
 
 == Udemy Section 13: Mock Exams
+
+== Linux Foundation: Exam Preparation
+[IMPORTANT]
+====
+. Where can I find practice questions for CKA/CKAD/CKS? -> https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks#is-there-training-to-prepare-for-the-certification-exam
+. Is there training to prepare for the certification exam? -> https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks#is-there-training-to-prepare-for-the-certification-exam-1
+. Take a look at the candidate handbook on the vertification website -> https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2 and make sure the minimum system requirements are met (https://syscheck.bridge.psiexams.com). Take a look at the other pages as well. Read the instructions aboud the CKA and CKAD (https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad).
+====
