@@ -46,5 +46,7 @@ The CKAD test to obtain the cert is a hands-on practical exam. So it is importan
 ====
 . Where can I find practice questions for CKA/CKAD/CKS? -> https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks#is-there-training-to-prepare-for-the-certification-exam
 . Is there training to prepare for the certification exam? -> https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks#is-there-training-to-prepare-for-the-certification-exam-1
-. Take a look at the candidate handbook on the vertification website -> https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2 and make sure the minimum system requirements are met (https://syscheck.bridge.psiexams.com). Take a look at the other pages as well. Read the instructions aboud the CKA and CKAD (https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad).
+. Take a look at the candidate handbook on the vertification website (and the other pages as well) -> https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2
+. Make sure the minimum system requirements are met -> https://syscheck.bridge.psiexams.com
+. Read the instructions aboud the CKA and CKAD -> https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad
 ====
