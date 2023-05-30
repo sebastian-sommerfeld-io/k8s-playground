@@ -16,7 +16,7 @@ Auto-generate docs based on Docker Compose config, Minikube config and Terraform
 
 The script auto-generates docs based on Docker Compose config, Minikube config and
 Terraform config. All generated files are Asciidoc and sorted into this repos docs (see folder
-`docs/modules/AUTO-GENERATED/pages/environment`).
+`docs/modules/AUTO-GENERATED/pages`).
 
 NOTE: When calling this script from the `.github/workflows/auto-generate-docs.yml` workflow,
 make sure you create the bash-docs first.
