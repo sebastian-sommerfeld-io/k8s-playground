@@ -1,0 +1,5 @@
+= Open Questions
+
+Add information to * xref:index.adoc[] page once a question is answered.
+
+. Can I install yamllint during the CKAD exam test or run yamllint from a Docker container?

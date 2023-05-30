@@ -12,6 +12,7 @@ The exam assumes working knowledge of container runtimes and microservice archit
 
 
 == Udemy Section 1: Course Content and Introduction
+The CKAd test to obtain the cert is a hands-on practical exam. So it is important to practice what you learn. So make use of the browser-lab which accompanies the Udemy course.
 
 == Udemy Section 2: Core Concepts
 
