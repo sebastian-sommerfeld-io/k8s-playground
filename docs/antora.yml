@@ -1,7 +1,7 @@
 ---
 name: k8s-playground
 title: Kubernetes Playground
-version: main
+version: ckad-notes-and-cert
 start_page: ROOT:index.adoc
 nav:
   - modules/ROOT/nav.adoc
