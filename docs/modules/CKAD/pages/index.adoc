@@ -9,3 +9,30 @@ The exam assumes working knowledge of container runtimes and microservice archit
 
 * Udemy Course: https://www.udemy.com/course/certified-kubernetes-application-developer/learn/lecture/12299352#overview
 * Cert: https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/
+
+
+== Udemy Section 1: Course Content and Introduction
+
+== Udemy Section 2: Core Concepts
+
+== Udemy Section 3: Configuration
+
+== Udemy Section 4: Multi-Container Pods
+
+== Udemy Section 5: Observability
+
+== Udemy Section 6: Pod Design
+
+== Udemy Section 7: Services & Networking
+
+== Udemy Section 8: State Persistence
+
+== Udemy Section 9: Updates for Sept. 2021 Changes
+
+== Udemy Section 10: Additional Practice - Kubernetes Challenges
+
+== Udemy Section 11: Certification Tips
+
+== Udemy Section 12: Lightning Labels
+
+== Udemy Section 13: Mock Exams
