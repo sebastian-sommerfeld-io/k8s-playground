@@ -1,2 +1,1 @@
-* New Blank Module
-** xref:index.adoc[]
+* xref:index.adoc[]

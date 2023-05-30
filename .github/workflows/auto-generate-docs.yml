@@ -38,13 +38,13 @@ jobs:
           caption: Kubernetes Playground
       - name: Generate docs from bash scripts
         uses: sebastian-sommerfeld-io/github-action-generate-docs@main
-      - name: Generate docs about the environment based on the config
-        run: |
-          (
-            cd src/util || exit
-            ./generate-docs.sh
-          )
-        shell: bash
+      # - name: Generate docs about the environment based on the config
+      #   run: |
+      #     (
+      #       cd src/util || exit
+      #       ./generate-docs.sh
+      #     )
+      #   shell: bash
       - name: Commit and push
         uses: EndBug/add-and-commit@v9
         with:
