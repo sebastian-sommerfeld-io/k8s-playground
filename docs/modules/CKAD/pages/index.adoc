@@ -49,6 +49,24 @@ Used to deploy and manage application on akubernetes cluster, to get information
 
 *From the link:https://kubernetes.io/docs/reference/glossary/?all=true#term-control-plane[Kubernetes Glossary]:* The container orchestration layer that exposes the API and interfaces to define, deploy, and manage the lifecycle of containers.
 
+=== Docker vs ContainerD
+image:CKAD:02/ctr-nerdctl-crictl.png[]
+
+* `ctr` is a command-line client shipped as part of the containerd project. If you have containerd running on a machine, chances are the `ctr` binary is also present there. The `ctr` client is similar to Docker's eponymous CLI, but the commands and flags often differ from their (typically more user-friendly) docker analogs. Historically, the primary audience of the `ctr` client was containerd developers themselves testing the daemon. However, `ctr` can serve as a great exploration means - it operates right on top of the containerd API, and by examining the available commands, you can get a rough idea of what containerd can or cannot do.
+* link:https://github.com/containerd/nerdctl[`nerdctl`] is a Docker-compatible CLI for link:https://containerd.io[containerd].
+* `crictl` is a command-line interface for CRI-compatible container runtimes. You can use it to inspect and debug container runtimes and applications on a Kubernetes node. 
+
+=== Recap Pods
+Kubernetes does not deploy containers directly on the worker node. Containers are encapsulated in a Kubernetes objecet called pod. A pod is a single instance of an application. A pod is the smalles object that you can create in Kubernetes.
+
+*Pods* usually have a 1-to-1 relationship with containers running the application. Scaling takes place through adding/removing pods.
+
+image:CKAD:02/pods-1.png[]
+
+*Multi-Container Pods* are possible but usually the containers inside the pod are not multiple containers of the same kind (= not the same image). Both containers share the lifecycle because they reside in the same Pod. They can communicate to each other via `localhost` since they share the same network space. They can also share the same storage space as well. But multi-container pods are a rare usecase.
+
+image:CKAD:02/pods-2.png[]
+
 == Udemy Section 3: Configuration
 
 == Udemy Section 4: Multi-Container Pods
