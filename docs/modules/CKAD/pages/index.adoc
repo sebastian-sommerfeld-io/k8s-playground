@@ -18,6 +18,36 @@ The CKAD test to obtain the cert is a hands-on practical exam. So it is importan
 
 
 == Udemy Section 2: Core Concepts
+=== Kubernetes Architecture
+. Node = Machine (physical or virtual) = Worker Node = The place where containers run
+. Cluster = Set of nodes
+. Master = Node which is configured as a Master -> responsible for the orchestration of containers on the actual worker nodes
+
+When installing kubernetes, the following *components* are installed
+
+. API Server -> Frontend for Kubernetes (Users, CLI, management devices all talk to the API server to interact with the cluser)
+. `etcd` (Service) -> Distributed key-value store (stores information from all nodes and all worker nodes in a distributed way)
+. `kubelet` (Service) -> The agent running on each node on the cluster and makes sure the containers are running on the nodes as expected.
+. Container Runtime -> Underlying softwar to run containers (e.g. Docker)
+. Controller -> The brain behind orchestration. Responsible for noticing and responding when nodes, containers or endpoints go down. Controllers make decisions on bringing up new containers.
+. Scheduler -> Distributing work / containers accross multiple nodes (looks for newly created containers and assigns them to nodes)
+
+==== How does one server become a master and another one a worker?
+Worker nodes come with a container runtime. Master nodes are not intended to run containers. They only control the cluster.
+
+All information gathered from the `kube-apiserver` and the `kubelet` instances are stored in `etcd` on the master.
+
+image:CKAD:02/master-worker.png[]
+
+==== `kubectl`
+Kubernetes provides a command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API. This tool is named `kubectl`.
+
+Used to deploy and manage application on akubernetes cluster, to get information on the cluster and cluster nodes and many other things.
+
+==== Master Node vs Control Plane
+*Is Kubernetes control plane the same as the master node?* -> A Kubernetes cluster consists of a set of nodes, which all run containerized applications. Of those, a small number are running applications that manage the cluster. They are referred to as master nodes, also collectively known as the control plane.
+
+*From the link:https://kubernetes.io/docs/reference/glossary/?all=true#term-control-plane[Kubernetes Glossary]:* The container orchestration layer that exposes the API and interfaces to define, deploy, and manage the lifecycle of containers.
 
 == Udemy Section 3: Configuration
 
