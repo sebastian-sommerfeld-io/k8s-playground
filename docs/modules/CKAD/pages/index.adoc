@@ -56,7 +56,17 @@ image:CKAD:02/ctr-nerdctl-crictl.png[]
 * link:https://github.com/containerd/nerdctl[`nerdctl`] is a Docker-compatible CLI for link:https://containerd.io[containerd].
 * `crictl` is a command-line interface for CRI-compatible container runtimes. You can use it to inspect and debug container runtimes and applications on a Kubernetes node. 
 
-=== Recap Pods
+==== Mandatory yaml fields
+A Kubernetes yaml file always needs these 4 parts:
+[source, yaml]
+----
+apiVersion: ...
+kind: ...
+metadata: ...
+spec: ...
+----
+
+=== Pods
 Kubernetes does not deploy containers directly on the worker node. Containers are encapsulated in a Kubernetes objecet called pod. A pod is a single instance of an application. A pod is the smalles object that you can create in Kubernetes.
 
 *Pods* usually have a 1-to-1 relationship with containers running the application. Scaling takes place through adding/removing pods.
@@ -66,6 +76,16 @@ image:CKAD:02/pods-1.png[]
 *Multi-Container Pods* are possible but usually the containers inside the pod are not multiple containers of the same kind (= not the same image). Both containers share the lifecycle because they reside in the same Pod. They can communicate to each other via `localhost` since they share the same network space. They can also share the same storage space as well. But multi-container pods are a rare usecase.
 
 image:CKAD:02/pods-2.png[]
+
+==== A Note on Editing Existing Pods
+In any of the practical quizzes if you are asked to edit an existing pod, please note the following:
+
+* If you are given a pod definition file, edit that file and use it to create a new pod.
+* If you are not given a pod definition file, you may extract the definition to a file using the below command: `kubectl get pod <pod-name> -o yaml > pod-definition.yaml`, Then edit the file to make the necessary changes, delete and re-create the pod.
+* Use the `kubectl edit pod <pod-name>` command to edit pod properties.
+
+=== Replication Controller + Replica Sets
+The Replication Controller is the older technology which is now replaced by Replica Set.
 
 == Udemy Section 3: Configuration
 
