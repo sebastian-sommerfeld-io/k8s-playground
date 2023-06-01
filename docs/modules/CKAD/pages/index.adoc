@@ -136,6 +136,27 @@ Resource quotas work like this:
 * If quota is enabled in a namespace for compute resources like cpu and memory, users must specify requests or limits for those values; otherwise, the quota system may reject pod creation. 
 
 == Udemy Section 3: Configuration
+Remember, you cannot edit specifications of an existingpod  other than the below.
+
+* `spec.containers[*].image`
+* `spec.initContainers[*].image`
+* `spec.activeDeadlineSeconds`
+* `spec.tolerations`
+
+For example you cannot edit the environment variables, service accounts, resource limits of a running pod. You have to delete the pod and create a new one.
+
+With Deployments you can easily edit any field/property of the ppd template. Since the pod template is a child of the deployment specification,  with every change the deployment will automatically delete and create a new pod with the new changes. So if you are asked to edit a property of a pod part of a deployment you may do that simply by running the command `kubectl edit deployment my-deployment `.`
+
+=== ConfigMaps
+A ConfigMap is an API object used to store non-confidential data in key-value pairs. Pods can consume ConfigMaps as environment variables, command-line arguments, or as configuration files in a volume.
+
+Use `kubectl create configmap` to create a ConfigMap. To initialize the yaml file, use `kubectl create configmap --dry-run=client -o yaml > some-configmap.yml`
+
+A ConfigMap allows you to decouple environment-specific configuration from your container images, so that your applications are easily portable.
+
+For example, imagine that you are developing an application that you can run on your own computer (for development) and in the cloud (to handle real traffic). You write the code to look in an environment variable named DATABASE_HOST. Locally, you set that variable to localhost. In the cloud, you set it to refer to a Kubernetes Service that exposes the database component to your cluster. This lets you fetch a container image running in the cloud and debug the exact same code locally if needed.
+
+A ConfigMap is not designed to hold large chunks of data. The data stored in a ConfigMap cannot exceed 1 MiB. If you need to store settings that are larger than this limit, you may want to consider mounting a volume or use a separate database or file service.
 
 == Udemy Section 4: Multi-Container Pods
 
