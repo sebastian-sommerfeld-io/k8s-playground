@@ -51,9 +51,36 @@ jobs:
         with:
           ignore_paths: node_modules target
 
+  kube-linter:
+    runs-on: ubuntu-latest
+    needs: lint-yaml
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run kube-linter
+        run: docker run -i --rm --volume "$(pwd)/src/main/apps:/apps" stackrox/kube-linter:v0.6.4-alpine lint /app
+        shell: bash
+
+  kubeval:
+    runs-on: ubuntu-latest
+    needs: lint-yaml
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run kube-linter
+        run: |
+          for dir in src/main/apps/*/ ; do
+            (
+              cd "$dir" || exit
+              echo "[INFO] Current directory = $dir"
+              docker run -i --rm --volume "$(pwd):/apps" --workdir "/apps" cytopia/kubeval:0.16 ./*.yml
+            )
+          done
+        shell: bash
+
   on-failure:
     runs-on: ubuntu-latest
-    needs: ['lint-yaml', 'lint-folders', 'lint-filenames', 'shellcheck']
+    needs: ['lint-yaml', 'lint-folders', 'lint-filenames', 'shellcheck', 'kube-linter', 'kubeval']
     if: failure()
 
     steps:

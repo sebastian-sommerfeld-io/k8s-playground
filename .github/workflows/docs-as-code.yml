@@ -1,5 +1,5 @@
 ---
-name: Auto-generate docs
+name: Generate docs (as Code)
 
 on:
   push:
