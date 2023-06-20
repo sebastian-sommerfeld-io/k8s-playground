@@ -1,7 +1,6 @@
-* `xref:AUTO-GENERATED:bash-docs/src/util/generate-docs-sh.adoc[src/util/generate-docs.sh]`
-* `xref:AUTO-GENERATED:bash-docs/src/main/provision/install-sh.adoc[src/main/provision/install.sh]`
-* `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]`
 * `xref:AUTO-GENERATED:bash-docs/src/main/start-sh.adoc[src/main/start.sh]`
 * `xref:AUTO-GENERATED:bash-docs/src/main/deploy-sh.adoc[src/main/deploy.sh]`
 * `xref:AUTO-GENERATED:bash-docs/src/main/expose-dashboard-sh.adoc[src/main/expose-dashboard.sh]`
-* `xref:AUTO-GENERATED:bash-docs/src/main/lib/log-sh.adoc[src/main/lib/log.sh]`
+* `xref:AUTO-GENERATED:bash-docs/src/main/stop-sh.adoc[src/main/stop.sh]`
+* `xref:AUTO-GENERATED:bash-docs/src/main/provision/install-sh.adoc[src/main/provision/install.sh]`
+* `xref:AUTO-GENERATED:bash-docs/src/util/generate-docs-sh.adoc[src/util/generate-docs.sh]`
