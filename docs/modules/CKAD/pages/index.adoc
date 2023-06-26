@@ -2,6 +2,7 @@
 
 The Certified Kubernetes Application Developer (CKAD) program has been developed by the Cloud Native Computing Foundation (CNCF), in collaboration with The Linux Foundation, to help expand the Kubernetes ecosystem through standardized training and certification.
 
+== About
 *Who Is It For:* This certification is for Kubernetes engineers, cloud engineers and other IT professionals responsible for building, deploying, and configuring cloud native applications with Kubernetes.
 
 *About This Certification:* CKAD has been developed by The Linux Foundation and the Cloud Native Computing Foundation (CNCF), to help expand the Kubernetes ecosystem through standardized training and certification. This exam is an online, proctored, performance-based test that consists of a set of performance-based tasks (problems) to be solved in a command line.
