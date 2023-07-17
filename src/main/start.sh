@@ -4,15 +4,18 @@
 #
 # @description ...
 #
-# === Services
+# === Script Arguments
 #
-# ==== Docker Compose
-# include::ROOT:partial$services-docker.adoc[]
+# The script does not accept any parameters.
 #
-# ==== Minikube
-# include::ROOT:partial$services-k8s.adoc[]
+# === Script Example
 #
-# === Prerequisites
+# [source, bash]
+# ```
+# ./start.sh
+# ```
+#
+# == Prerequisites
 #
 # A docker installation is needed to run minikube. To run all services from this stack Docker 23.0.5
 # or greater is needed.
@@ -25,18 +28,15 @@
 # * Internet connection
 # * Container or virtual machine manager, such as: Docker, QEMU, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, or VMware Fusion/Workstation
 #
-# === Script Arguments
+# == Services
 #
-# The script does not accept any parameters.
+# === Docker Compose
+# include::ROOT:partial$services-docker.adoc[]
 #
-# === Script Example
+# === Minikube
+# include::ROOT:partial$services-k8s.adoc[]
 #
-# [source, bash]
-# ```
-# ./start.sh
-# ```
-#
-# === See also
+# == See also
 #
 # . Startup minikube: https://minikube.sigs.k8s.io/docs/start/
 

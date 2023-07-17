@@ -26,7 +26,7 @@
 # ./expose-dashboard.sh
 # ```
 #
-# === See Also
+# == See Also
 #
 # . See https://minikube.sigs.k8s.io/docs/handbook/dashboard and https://minikube.sigs.k8s.io/docs/commands/dashboard
 # for further information on how to use the Dashboard app with minikube.

@@ -8,7 +8,7 @@
 #
 # The script does not accept any parameters.
 #
-# === Script Example
+# == Script Example
 #
 # [source, bash]
 # ```
