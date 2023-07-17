@@ -2,9 +2,18 @@
 # @file install.sh
 # @brief Install minikube and tools.
 #
-# @description Install minikube and tools like kubectl. Minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.
+# @description Install minikube and tools like kubectl. Minikube is local Kubernetes, focusing on making it
+# easy to learn and develop for Kubernetes.
 #
-# === Prerequisites
+# === Script Arguments
+#
+# The script does not accept any parameters.
+#
+# == See Also
+#
+# . Stackoverflow: link:https://stackoverflow.com/questions/57821066/how-to-update-minikube-latest-version[How to update minikube latest version]
+#
+# == Prerequisites
 #
 # A docker installation is needed to run minikube. To run all services from this stack Docker 23.0.5
 # or greater is needed.
@@ -17,13 +26,7 @@
 # * Internet connection
 # * Container or virtual machine manager, such as: Docker, QEMU, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, or VMware Fusion/Workstation
 #
-# === Script Arguments
-#
-# The script does not accept any parameters.
-#
-# == See Also
-#
-# . Stackoverflow: link:https://stackoverflow.com/questions/57821066/how-to-update-minikube-latest-version[How to update minikube latest version]
+
 
 
 set -o errexit
