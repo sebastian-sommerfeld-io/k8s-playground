@@ -1,4 +1,4 @@
-= stop.sh
+= ci.yml
 
 // +-------------------------------------------+
 // |                                           |
@@ -9,25 +9,5 @@
 // |                                           |
 // +-------------------------------------------+
 
-// Source file = /github/workspace/src/main/stop.sh
+// Source file = /github/workspace/.github/workflows/ci.yml
 
-
-Shutdown the complete environment.
-
-== Overview
-
-...
-
-=== Script Arguments
-
-The script does not accept any parameters.
-
-* _$1_ (string): Some var
-
-=== Script Example
-
-[source, bash]
-
-----
-./stop.sh
-----
