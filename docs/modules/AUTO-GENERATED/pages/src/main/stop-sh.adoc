@@ -1,0 +1,21 @@
+= stop.sh
+
+Shutdown the complete environment.
+
+== Overview
+
+...
+
+=== Script Arguments
+
+The script does not accept any parameters.
+
+* _$1_ (string): Some var
+
+=== Script Example
+
+[source, bash]
+
+----
+./stop.sh
+----

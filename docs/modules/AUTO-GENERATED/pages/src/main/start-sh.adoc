@@ -1,0 +1,44 @@
+= start.sh
+
+Startup the complete environment.
+
+== Overview
+
+...
+
+=== Script Arguments
+
+The script does not accept any parameters.
+
+=== Script Example
+
+[source, bash]
+
+----
+./start.sh
+----
+
+== Prerequisites
+
+A docker installation is needed to run minikube. To run all services from this stack Docker 23.0.5
+or greater is needed.
+
+To run minikube you'll need
+
+* 2 CPUs or more
+* 2GB of free memory
+* 20GB of free disk space
+* Internet connection
+* Container or virtual machine manager, such as: Docker, QEMU, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, or VMware Fusion/Workstation
+
+== Services
+
+=== Docker Compose
+include::ROOT:partial$services-docker.adoc[]
+
+=== Minikube
+include::ROOT:partial$services-k8s.adoc[]
+
+== See also
+
+. Startup minikube: https://minikube.sigs.k8s.io/docs/start/
